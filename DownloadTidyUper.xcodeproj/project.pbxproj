@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F71F045318754EC70080571D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F045218754EC70080571D /* Cocoa.framework */; };
+		F71F045D18754EC70080571D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71F045B18754EC70080571D /* InfoPlist.strings */; };
+		F71F045F18754EC70080571D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F045E18754EC70080571D /* main.m */; };
+		F71F046318754EC70080571D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F71F046118754EC70080571D /* Credits.rtf */; };
+		F71F046618754EC70080571D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F046518754EC70080571D /* AppDelegate.m */; };
+		F71F046918754EC70080571D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71F046718754EC70080571D /* MainMenu.xib */; };
+		F71F046B18754EC70080571D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71F046A18754EC70080571D /* Images.xcassets */; };
+		F71F047218754EC70080571D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F047118754EC70080571D /* XCTest.framework */; };
+		F71F047318754EC70080571D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F045218754EC70080571D /* Cocoa.framework */; };
+		F71F047B18754EC70080571D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71F047918754EC70080571D /* InfoPlist.strings */; };
+		F71F047D18754EC70080571D /* DownloadTidyUperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F047C18754EC70080571D /* DownloadTidyUperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F71F047418754EC70080571D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F71F044718754EC70080571D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F71F044E18754EC70080571D;
+			remoteInfo = DownloadTidyUper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F71F044F18754EC70080571D /* DownloadTidyUper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadTidyUper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71F045218754EC70080571D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F71F045518754EC70080571D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F71F045618754EC70080571D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F71F045718754EC70080571D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F71F045A18754EC70080571D /* DownloadTidyUper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadTidyUper-Info.plist"; sourceTree = "<group>"; };
+		F71F045C18754EC70080571D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F71F045E18754EC70080571D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F71F046018754EC70080571D /* DownloadTidyUper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadTidyUper-Prefix.pch"; sourceTree = "<group>"; };
+		F71F046218754EC70080571D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F71F046418754EC70080571D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F71F046518754EC70080571D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F71F046818754EC70080571D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F71F046A18754EC70080571D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F71F047018754EC70080571D /* DownloadTidyUperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownloadTidyUperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71F047118754EC70080571D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F71F047818754EC70080571D /* DownloadTidyUperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadTidyUperTests-Info.plist"; sourceTree = "<group>"; };
+		F71F047A18754EC70080571D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F71F047C18754EC70080571D /* DownloadTidyUperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTidyUperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F71F044C18754EC70080571D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F045318754EC70080571D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71F046D18754EC70080571D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F047318754EC70080571D /* Cocoa.framework in Frameworks */,
+				F71F047218754EC70080571D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F71F044618754EC70080571D = {
+			isa = PBXGroup;
+			children = (
+				F71F045818754EC70080571D /* DownloadTidyUper */,
+				F71F047618754EC70080571D /* DownloadTidyUperTests */,
+				F71F045118754EC70080571D /* Frameworks */,
+				F71F045018754EC70080571D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F71F045018754EC70080571D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F71F044F18754EC70080571D /* DownloadTidyUper.app */,
+				F71F047018754EC70080571D /* DownloadTidyUperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71F045118754EC70080571D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F71F045218754EC70080571D /* Cocoa.framework */,
+				F71F047118754EC70080571D /* XCTest.framework */,
+				F71F045418754EC70080571D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F71F045418754EC70080571D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F71F045518754EC70080571D /* AppKit.framework */,
+				F71F045618754EC70080571D /* CoreData.framework */,
+				F71F045718754EC70080571D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F71F045818754EC70080571D /* DownloadTidyUper */ = {
+			isa = PBXGroup;
+			children = (
+				F71F046418754EC70080571D /* AppDelegate.h */,
+				F71F046518754EC70080571D /* AppDelegate.m */,
+				F71F046718754EC70080571D /* MainMenu.xib */,
+				F71F046A18754EC70080571D /* Images.xcassets */,
+				F71F045918754EC70080571D /* Supporting Files */,
+			);
+			path = DownloadTidyUper;
+			sourceTree = "<group>";
+		};
+		F71F045918754EC70080571D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F71F045A18754EC70080571D /* DownloadTidyUper-Info.plist */,
+				F71F045B18754EC70080571D /* InfoPlist.strings */,
+				F71F045E18754EC70080571D /* main.m */,
+				F71F046018754EC70080571D /* DownloadTidyUper-Prefix.pch */,
+				F71F046118754EC70080571D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F71F047618754EC70080571D /* DownloadTidyUperTests */ = {
+			isa = PBXGroup;
+			children = (
+				F71F047C18754EC70080571D /* DownloadTidyUperTests.m */,
+				F71F047718754EC70080571D /* Supporting Files */,
+			);
+			path = DownloadTidyUperTests;
+			sourceTree = "<group>";
+		};
+		F71F047718754EC70080571D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F71F047818754EC70080571D /* DownloadTidyUperTests-Info.plist */,
+				F71F047918754EC70080571D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F71F044E18754EC70080571D /* DownloadTidyUper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F71F048018754EC70080571D /* Build configuration list for PBXNativeTarget "DownloadTidyUper" */;
+			buildPhases = (
+				F71F044B18754EC70080571D /* Sources */,
+				F71F044C18754EC70080571D /* Frameworks */,
+				F71F044D18754EC70080571D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadTidyUper;
+			productName = DownloadTidyUper;
+			productReference = F71F044F18754EC70080571D /* DownloadTidyUper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F71F046F18754EC70080571D /* DownloadTidyUperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F71F048318754EC70080571D /* Build configuration list for PBXNativeTarget "DownloadTidyUperTests" */;
+			buildPhases = (
+				F71F046C18754EC70080571D /* Sources */,
+				F71F046D18754EC70080571D /* Frameworks */,
+				F71F046E18754EC70080571D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F71F047518754EC70080571D /* PBXTargetDependency */,
+			);
+			name = DownloadTidyUperTests;
+			productName = DownloadTidyUperTests;
+			productReference = F71F047018754EC70080571D /* DownloadTidyUperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F71F044718754EC70080571D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					F71F046F18754EC70080571D = {
+						TestTargetID = F71F044E18754EC70080571D;
+					};
+				};
+			};
+			buildConfigurationList = F71F044A18754EC70080571D /* Build configuration list for PBXProject "DownloadTidyUper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F71F044618754EC70080571D;
+			productRefGroup = F71F045018754EC70080571D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F71F044E18754EC70080571D /* DownloadTidyUper */,
+				F71F046F18754EC70080571D /* DownloadTidyUperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F71F044D18754EC70080571D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F045D18754EC70080571D /* InfoPlist.strings in Resources */,
+				F71F046B18754EC70080571D /* Images.xcassets in Resources */,
+				F71F046318754EC70080571D /* Credits.rtf in Resources */,
+				F71F046918754EC70080571D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71F046E18754EC70080571D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F047B18754EC70080571D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F71F044B18754EC70080571D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F046618754EC70080571D /* AppDelegate.m in Sources */,
+				F71F045F18754EC70080571D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71F046C18754EC70080571D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71F047D18754EC70080571D /* DownloadTidyUperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F71F047518754EC70080571D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F71F044E18754EC70080571D /* DownloadTidyUper */;
+			targetProxy = F71F047418754EC70080571D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F71F045B18754EC70080571D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F71F045C18754EC70080571D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F71F046118754EC70080571D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F71F046218754EC70080571D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F71F046718754EC70080571D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F71F046818754EC70080571D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F71F047918754EC70080571D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F71F047A18754EC70080571D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F71F047E18754EC70080571D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F71F047F18754EC70080571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F71F048118754EC70080571D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
+				INFOPLIST_FILE = "DownloadTidyUper/DownloadTidyUper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F71F048218754EC70080571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
+				INFOPLIST_FILE = "DownloadTidyUper/DownloadTidyUper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F71F048418754EC70080571D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DownloadTidyUper.app/Contents/MacOS/DownloadTidyUper";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DownloadTidyUperTests/DownloadTidyUperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F71F048518754EC70080571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DownloadTidyUper.app/Contents/MacOS/DownloadTidyUper";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
+				INFOPLIST_FILE = "DownloadTidyUperTests/DownloadTidyUperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F71F044A18754EC70080571D /* Build configuration list for PBXProject "DownloadTidyUper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71F047E18754EC70080571D /* Debug */,
+				F71F047F18754EC70080571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F71F048018754EC70080571D /* Build configuration list for PBXNativeTarget "DownloadTidyUper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71F048118754EC70080571D /* Debug */,
+				F71F048218754EC70080571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F71F048318754EC70080571D /* Build configuration list for PBXNativeTarget "DownloadTidyUperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71F048418754EC70080571D /* Debug */,
+				F71F048518754EC70080571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F71F044718754EC70080571D /* Project object */;
+}
