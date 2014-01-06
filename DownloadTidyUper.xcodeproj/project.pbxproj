@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7068E3A187AB32D00994FCA /* SFBPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7068E35187AB32D00994FCA /* SFBPopover.m */; };
+		F7068E3B187AB32D00994FCA /* SFBPopoverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F7068E37187AB32D00994FCA /* SFBPopoverWindow.m */; };
+		F7068E3C187AB32D00994FCA /* SFBPopoverWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F7068E39187AB32D00994FCA /* SFBPopoverWindowFrame.m */; };
+		F7068E3E187AB39900994FCA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7068E3D187AB39900994FCA /* Quartz.framework */; };
 		F71F045318754EC70080571D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F045218754EC70080571D /* Cocoa.framework */; };
 		F71F045D18754EC70080571D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71F045B18754EC70080571D /* InfoPlist.strings */; };
 		F71F045F18754EC70080571D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F045E18754EC70080571D /* main.m */; };
@@ -18,6 +22,8 @@
 		F71F047318754EC70080571D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F045218754EC70080571D /* Cocoa.framework */; };
 		F71F047B18754EC70080571D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71F047918754EC70080571D /* InfoPlist.strings */; };
 		F71F047D18754EC70080571D /* DownloadTidyUperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F047C18754EC70080571D /* DownloadTidyUperTests.m */; };
+		F71F0488187566740080571D /* typeDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71F0487187566740080571D /* typeDic.plist */; };
+		F7F8F1891876AB5100059F36 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F8F1881876AB5100059F36 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +36,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F7068E30187AAB9E00994FCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F7068E34187AB32D00994FCA /* SFBPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBPopover.h; sourceTree = "<group>"; };
+		F7068E35187AB32D00994FCA /* SFBPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBPopover.m; sourceTree = "<group>"; };
+		F7068E36187AB32D00994FCA /* SFBPopoverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBPopoverWindow.h; sourceTree = "<group>"; };
+		F7068E37187AB32D00994FCA /* SFBPopoverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBPopoverWindow.m; sourceTree = "<group>"; };
+		F7068E38187AB32D00994FCA /* SFBPopoverWindowFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBPopoverWindowFrame.h; sourceTree = "<group>"; };
+		F7068E39187AB32D00994FCA /* SFBPopoverWindowFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBPopoverWindowFrame.m; sourceTree = "<group>"; };
+		F7068E3D187AB39900994FCA /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		F71F044F18754EC70080571D /* DownloadTidyUper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadTidyUper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71F045218754EC70080571D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F71F045518754EC70080571D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +75,9 @@
 		F71F047818754EC70080571D /* DownloadTidyUperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadTidyUperTests-Info.plist"; sourceTree = "<group>"; };
 		F71F047A18754EC70080571D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F71F047C18754EC70080571D /* DownloadTidyUperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTidyUperTests.m; sourceTree = "<group>"; };
+		F71F048618754EF90080571D /* DownloadTidyUper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DownloadTidyUper.entitlements; sourceTree = "<group>"; };
+		F71F0487187566740080571D /* typeDic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeDic.plist; sourceTree = "<group>"; };
+		F7F8F1881876AB5100059F36 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7068E3E187AB39900994FCA /* Quartz.framework in Frameworks */,
+				F7F8F1891876AB5100059F36 /* Carbon.framework in Frameworks */,
 				F71F045318754EC70080571D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7068E33187AB31600994FCA /* SFBPopover */ = {
+			isa = PBXGroup;
+			children = (
+				F7068E34187AB32D00994FCA /* SFBPopover.h */,
+				F7068E35187AB32D00994FCA /* SFBPopover.m */,
+				F7068E36187AB32D00994FCA /* SFBPopoverWindow.h */,
+				F7068E37187AB32D00994FCA /* SFBPopoverWindow.m */,
+				F7068E38187AB32D00994FCA /* SFBPopoverWindowFrame.h */,
+				F7068E39187AB32D00994FCA /* SFBPopoverWindowFrame.m */,
+			);
+			name = SFBPopover;
+			sourceTree = "<group>";
+		};
 		F71F044618754EC70080571D = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +138,8 @@
 		F71F045118754EC70080571D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7068E3D187AB39900994FCA /* Quartz.framework */,
+				F7F8F1881876AB5100059F36 /* Carbon.framework */,
 				F71F045218754EC70080571D /* Cocoa.framework */,
 				F71F047118754EC70080571D /* XCTest.framework */,
 				F71F045418754EC70080571D /* Other Frameworks */,
@@ -115,6 +160,8 @@
 		F71F045818754EC70080571D /* DownloadTidyUper */ = {
 			isa = PBXGroup;
 			children = (
+				F7068E33187AB31600994FCA /* SFBPopover */,
+				F71F048618754EF90080571D /* DownloadTidyUper.entitlements */,
 				F71F046418754EC70080571D /* AppDelegate.h */,
 				F71F046518754EC70080571D /* AppDelegate.m */,
 				F71F046718754EC70080571D /* MainMenu.xib */,
@@ -132,6 +179,7 @@
 				F71F045E18754EC70080571D /* main.m */,
 				F71F046018754EC70080571D /* DownloadTidyUper-Prefix.pch */,
 				F71F046118754EC70080571D /* Credits.rtf */,
+				F71F0487187566740080571D /* typeDic.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,6 +212,7 @@
 				F71F044B18754EC70080571D /* Sources */,
 				F71F044C18754EC70080571D /* Frameworks */,
 				F71F044D18754EC70080571D /* Resources */,
+				F7068E30187AAB9E00994FCA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -200,6 +249,13 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
+					F71F044E18754EC70080571D = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					F71F046F18754EC70080571D = {
 						TestTargetID = F71F044E18754EC70080571D;
 					};
@@ -229,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71F0488187566740080571D /* typeDic.plist in Resources */,
 				F71F045D18754EC70080571D /* InfoPlist.strings in Resources */,
 				F71F046B18754EC70080571D /* Images.xcassets in Resources */,
 				F71F046318754EC70080571D /* Credits.rtf in Resources */,
@@ -251,8 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7068E3A187AB32D00994FCA /* SFBPopover.m in Sources */,
+				F7068E3C187AB32D00994FCA /* SFBPopoverWindowFrame.m in Sources */,
 				F71F046618754EC70080571D /* AppDelegate.m in Sources */,
 				F71F045F18754EC70080571D /* main.m in Sources */,
+				F7068E3B187AB32D00994FCA /* SFBPopoverWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +442,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DownloadTidyUper/DownloadTidyUper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/surrender/Dropbox/DownloadTidyUper,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
 				INFOPLIST_FILE = "DownloadTidyUper/DownloadTidyUper-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,11 +462,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DownloadTidyUper/DownloadTidyUper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/surrender/Dropbox/DownloadTidyUper,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DownloadTidyUper/DownloadTidyUper-Prefix.pch";
 				INFOPLIST_FILE = "DownloadTidyUper/DownloadTidyUper-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -463,6 +537,7 @@
 				F71F048218754EC70080571D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F71F048318754EC70080571D /* Build configuration list for PBXNativeTarget "DownloadTidyUperTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +546,7 @@
 				F71F048518754EC70080571D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
