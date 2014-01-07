@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.m
 //  DownloadTidyUper
@@ -7,45 +8,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Carbon/Carbon.h>
 #import "SFBPopover.h"
-
-//用于保存快捷键事件回调的引用，以便于可以注销
-static EventHandlerRef g_EventHandlerRef = NULL;
-
-//用于保存快捷键注册的引用，便于可以注销该快捷键
-static EventHotKeyRef a_HotKeyRef = NULL;
-static EventHotKeyRef b_HotKeyRef = NULL;
-
-//快捷键注册使用的信息，用在回调中判断是哪个快捷键被触发
-static EventHotKeyID a_HotKeyID = {'keyA',1};
-static EventHotKeyID b_HotKeyID = {'keyB',2};
-
-//快捷键的回调方法
-OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent, void *inUserData)
-{
-    //判定事件的类型是否与所注册的一致
-    if (GetEventClass(inEvent) == kEventClassKeyboard && GetEventKind(inEvent) == kEventHotKeyPressed)
-    {
-        //获取快捷键信息，以判定是哪个快捷键被触发
-        EventHotKeyID keyID;
-        GetEventParameter(inEvent,
-                          kEventParamDirectObject,
-                          typeEventHotKeyID,
-                          NULL,
-                          sizeof(keyID),
-                          NULL,
-                          &keyID);
-        if (keyID.id == a_HotKeyID.id) {
-            NSLog(@"pressed:shift+command+A");
-        }
-        if (keyID.id == b_HotKeyID.id) {
-            NSLog(@"pressed:option+B");
-        }
-    }
-    
-    return noErr;
-}
 
 @interface AppDelegate ()
 {
@@ -68,51 +31,8 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    //先注册快捷键的事件回调
-    EventTypeSpec eventSpecs[] = {{kEventClassKeyboard,kEventHotKeyPressed}};
-    InstallApplicationEventHandler(NewEventHandlerUPP(myHotKeyHandler),
-                                   GetEventTypeCount(eventSpecs),
-                                   eventSpecs,
-                                   NULL,
-                                   &g_EventHandlerRef);
-    //注册快捷键:shift+command+A
-    RegisterEventHotKey(kVK_ANSI_A,
-                        cmdKey|shiftKey,
-                        a_HotKeyID,
-                        GetApplicationEventTarget(),
-                        0,
-                        &a_HotKeyRef);
-    
-    //注册快捷键:option+B
-    RegisterEventHotKey(kVK_ANSI_B,
-                        optionKey,
-                        b_HotKeyID,
-                        GetApplicationEventTarget(),
-                        0,
-                        &b_HotKeyRef);
 }
 
-- (void)applicationWillTerminate:(NSNotification *)notification
-{
-    //注销快捷键
-    if (a_HotKeyRef)
-    {
-        UnregisterEventHotKey(a_HotKeyRef);
-        a_HotKeyRef = NULL;
-    }
-    if (b_HotKeyRef)
-    {
-        UnregisterEventHotKey(b_HotKeyRef);
-        b_HotKeyRef = NULL;
-    }
-    //注销快捷键的事件回调
-    if (g_EventHandlerRef)
-    {
-        RemoveEventHandler(g_EventHandlerRef);
-        g_EventHandlerRef = NULL;
-    }
-    
-}
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
@@ -129,11 +49,12 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     //localized
     [_nameLabel setStringValue:NSLocalizedString(@"name_label", nil)];
     [_startButton setTitle:NSLocalizedString(@"start_button", nil)];
-    [_undoButton setTitle:NSLocalizedString(@"undo_button", ni)];
+    [_undoButton setTitle:NSLocalizedString(@"undo_button", nil)];
     [_textInfo setStringValue:NSLocalizedString(@"text_info", nil)];
     
-    _popover = [[SFBPopover alloc] initWithContentView:_customView];
     
+    //set _popOver
+    _popover = [[SFBPopover alloc] initWithContentView:_customView];
     [_popover setBackgroundColor:[NSColor controlColor]];
     [_popover setDrawsArrow:YES];
     [_popover setPosition:SFBPopoverPositionBottom];
@@ -151,6 +72,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
         NSAlert *alert = [self cancelAlert];
         [alert beginSheetModalForWindow:self.window modalDelegate:nil didEndSelector:nil contextInfo:nil];
     }
+    
     BOOL finished = [self tidyDownloads];
     
     //开始整理
@@ -199,11 +121,13 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
         [self cancelTydiUp];
     }
 }
+
 - (void) openaAlertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 {
     if (returnCode == NSAlertDefaultReturn)  [[NSWorkspace sharedWorkspace]openFile:[[self DownloadPath] path]];
 }
 /*********************************分割线*******************************/
+
 
 - (NSURL *)DownloadPath
 {
@@ -225,11 +149,12 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 
 - (BOOL)tidyDownloads
 {
+     _isTidy = YES;
+    
     [_progressIndocator setDoubleValue:0.0];
     [_progressIndocator incrementBy:20.0];
-    _isTidy = YES;
 
-     NSFileManager *fm = [NSFileManager defaultManager];
+    NSFileManager *fm = [NSFileManager defaultManager];
     
     //get download path
     NSString *DownloadPath = [[self DownloadPath] path];
@@ -269,39 +194,53 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     NSArray *docArray = [_dic objectForKey:kDocs];
     NSArray *appArray = [_dic objectForKey:kApplication];
     
-    for (NSString *path in DownloadFiles) {
-        //progress ++
-       
-        NSString *fullPath = [DownloadPath stringByAppendingPathComponent:path];
-        NSString *extension = [path pathExtension];
-        if (![fm fileExistsAtPath:fullPath]) {
-            NSLog(@"file not exist");
-            continue;
+
+    __block dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    
+    dispatch_queue_t queue = dispatch_queue_create("move path", NULL);
+    
+    dispatch_sync(queue, ^(void){
+        for (NSString *path in DownloadFiles) {
+            
+            NSString *fullPath = [DownloadPath stringByAppendingPathComponent:path];
+            NSString *extension = [path pathExtension];
+            if (![fm fileExistsAtPath:fullPath]) {
+                NSLog(@"file not exist");
+                continue;
+            }
+            
+            if ([dmgArray containsObject:extension]) {
+                if (![fm moveItemAtPath:fullPath toPath:[dmgPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
+            else if ([zipArray containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[zipPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
+            else if ([movieArray containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[moviePath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+                
+            }
+            else if ([mp3Array containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[mp3Path stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
+            else if ([picArray containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[picPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
+            else if ([docArray containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[docPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
+            else if ([appArray containsObject:extension]){
+                if (![fm moveItemAtPath:fullPath toPath:[appPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
+            }
         }
         
-        if ([dmgArray containsObject:extension]) {
-               if (![fm moveItemAtPath:fullPath toPath:[dmgPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-        else if ([zipArray containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[zipPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-        else if ([movieArray containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[moviePath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-            
-        }
-        else if ([mp3Array containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[mp3Path stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-        else if ([picArray containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[picPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-        else if ([docArray containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[docPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-        else if ([appArray containsObject:extension]){
-            if (![fm moveItemAtPath:fullPath toPath:[appPath stringByAppendingPathComponent:path] error:nil]) NSLog(@"move %@ failed",path);
-        }
-    }
+        dispatch_semaphore_signal(sem);
+    });
+    
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    
+    //  dispatch_release(sem);
+    //   dispatch_release(queue);
+
     _isTidy = NO;
     _finished = YES;
     [_progressIndocator setDoubleValue:100.0];
@@ -335,27 +274,29 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 }
 
 
+
+
 - (NSAlert *)WarmingAlert
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Attention" defaultButton:@"no" alternateButton:@"yes" otherButton:nil informativeTextWithFormat:@"Will you cancel the last tidyup?"];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"attention", nil) defaultButton:NSLocalizedString(@"no",nil) alternateButton:NSLocalizedString(@"yes", nil) otherButton:nil informativeTextWithFormat:NSLocalizedString(@"WarmingAlert_message", nil)];
     return alert;
 }
 
 - (NSAlert *)cancelAlert
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Attention" defaultButton:@"yes" alternateButton:nil otherButton:nil informativeTextWithFormat:@"you have tidy up Downloads finished,Do not need tidy again"];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"attention", nil) defaultButton:NSLocalizedString(@"yes", nil) alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"cancelAlert_message", nil)];
     return alert;
 }
 
 - (NSAlert *)doNotNeedAlert
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Attention" defaultButton:@"yes" alternateButton:nil otherButton:nil informativeTextWithFormat:@"There is few files,you do not need tidyup"];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"attention", nil) defaultButton:NSLocalizedString(@"yes", nil) alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"doNotNeedAlert", nil)];
     return alert;
 }
 
 - (NSAlert *)openDownloadAlert
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Congradulation" defaultButton:@"yes" alternateButton:@"no" otherButton:Nil informativeTextWithFormat:@"I have tidy up your download finished,would you like to have a look at it"];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"congratulations", nil) defaultButton:NSLocalizedString(@"yes", nil)alternateButton:NSLocalizedString(@"no",nil) otherButton:Nil informativeTextWithFormat:NSLocalizedString(@"openDownloadAlert", nil)];
     return alert;
 }
 

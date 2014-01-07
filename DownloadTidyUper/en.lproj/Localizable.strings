@@ -9,5 +9,13 @@
 "start_button" = "start";
 "undo_button"  = "undo";
 "name_label"   = "Tidy up Downloads by type";
-"text_info"    = "DownloadTidyUper's main purpose is to tidy up your download folder,make the files into a folder when there are the same type,if you don't think it is helpful,just click "undo" to back before,Thanks your support.";
+"text_info"    = "DownloadTidyUper's main purpose is to tidy up your download folder,make the files into a folder when there are the same type,if you don't think it is helpful,just click 'undo' to back before,Thanks your support.";
+"attention" = "Attention";
+"congratulations" = "Congratulations!";
+"no" = "NO";
+"yes" = "YES";
+"WarmingAlert_message" = "Will you cancel the last tidy up?";
+"cancelAlert_message" = "you have tidied 'Downloads' up,Do not need tidy again";
+"doNotNeedAlert" = "There is only a few files,you do not need tidy up";
+"openDownloadAlert" = "I have tidy  your 'downloads' up,would you like to have a look at it";
 

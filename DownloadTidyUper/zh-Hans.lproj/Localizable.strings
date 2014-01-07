@@ -8,4 +8,13 @@
 "start_button" = "开始";
 "undo_button"  = "撤销";
 "name_label"   = "按类型整理下载文件夹";
-"text_info"    = "DownloadTidyUper 的主要目的是归并下载文件夹中类型相同的文件到同一个文件夹，如果你觉得这样没有到达你的要求，可以店家"撤销"键返回之前的状态。;
+"text_info"    = "DownloadTidyUper 的主要目的是归并'Downloads'中类型相同的文件到同一个文件夹，如果你觉得这样没有到达你的要求，可以点击'撤销'键返回之前的状态，谢谢您的支持。";
+
+"attention" = "注意";
+"congratulations" = "恭喜！";
+"no" = "否";
+"yes" = "是";
+"WarmingAlert_message" = "您将要取消上次整理？";
+"cancelAlert_message" = "您已经整理过下'Downloads'，不需要再整理";
+"doNotNeedAlert" = "'Downloads'中文件过少，不需要整理";
+"openDownloadAlert" = "已经整理好了'Downloads'，是否打开？";
