@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  DownloadTidyUper
+
+  Created by surrender on 14-1-7.
+
+*/
+"start_button" = "开始";
+"undo_button"  = "撤销";
+"name_label"   = "按类型整理下载文件夹";
+"text_info"    = "DownloadTidyUper 的主要目的是归并下载文件夹中类型相同的文件到同一个文件夹，如果你觉得这样没有到达你的要求，可以店家"撤销"键返回之前的状态。;

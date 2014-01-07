@@ -126,6 +126,12 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     [_progressIndocator setMinValue:0.0];
     [_progressIndocator setMaxValue:100.0];
     
+    //localized
+    [_nameLabel setStringValue:NSLocalizedString(@"name_label", nil)];
+    [_startButton setTitle:NSLocalizedString(@"start_button", nil)];
+    [_undoButton setTitle:NSLocalizedString(@"undo_button", ni)];
+    [_textInfo setStringValue:NSLocalizedString(@"text_info", nil)];
+    
     _popover = [[SFBPopover alloc] initWithContentView:_customView];
     
     [_popover setBackgroundColor:[NSColor controlColor]];

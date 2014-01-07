@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  DownloadTidyUper
+
+  Created by surrender on 14-1-7.
+
+*/
+
+"start_button" = "start";
+"undo_button"  = "undo";
+"name_label"   = "Tidy up Downloads by type";
+"text_info"    = "DownloadTidyUper's main purpose is to tidy up your download folder,make the files into a folder when there are the same type,if you don't think it is helpful,just click "undo" to back before,Thanks your support.";
+

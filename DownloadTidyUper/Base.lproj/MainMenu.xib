@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -658,7 +658,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="423" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhv-vf-kJp">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qhv-vf-kJp">
                         <rect key="frame" x="17" y="72" width="244" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tidy up Downloads by type" id="IF2-wM-ehQ">
@@ -667,11 +667,11 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="ekm-uo-SEN">
+                    <progressIndicator maxValue="100" style="bar" id="ekm-uo-SEN">
                         <rect key="frame" x="20" y="19" width="383" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pFV-Pr-QAR">
+                    <button verticalHuggingPriority="750" id="pFV-Pr-QAR">
                         <rect key="frame" x="336" y="65" width="73" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aHO-Cc-lgO">
@@ -682,7 +682,7 @@
                             <action selector="start:" target="494" id="Bvu-57-IOv"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-y2-r1j">
+                    <button verticalHuggingPriority="750" id="d3r-y2-r1j">
                         <rect key="frame" x="336" y="38" width="73" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="undo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tj4-yA-Dbf">
@@ -693,7 +693,7 @@
                             <action selector="undo:" target="494" id="t7f-9Z-ZiP"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caD-21-bJ2">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="caD-21-bJ2">
                         <rect key="frame" x="221" y="69" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dfH-xg-u3e">
@@ -711,7 +711,11 @@
             <connections>
                 <outlet property="customView" destination="gob-kj-sCx" id="v9s-3u-7po"/>
                 <outlet property="helpButton" destination="caD-21-bJ2" id="Ej2-gf-Ypr"/>
+                <outlet property="nameLabel" destination="qhv-vf-kJp" id="aFr-Cn-vb5"/>
                 <outlet property="progressIndocator" destination="ekm-uo-SEN" id="KVg-NL-njM"/>
+                <outlet property="startButton" destination="pFV-Pr-QAR" id="XRM-Em-rVj"/>
+                <outlet property="textInfo" destination="hQ9-Ru-jRW" id="x56-0y-gIy"/>
+                <outlet property="undoButton" destination="d3r-y2-r1j" id="9Xs-uT-Dew"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
@@ -726,7 +730,7 @@
             <rect key="frame" x="0.0" y="0.0" width="290" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-Ru-jRW">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="hQ9-Ru-jRW">
                     <rect key="frame" x="-3" y="-11" width="296" height="103"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="pI1-p8-73I">

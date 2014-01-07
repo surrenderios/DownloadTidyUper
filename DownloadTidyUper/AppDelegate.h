@@ -20,6 +20,10 @@
 @property (weak) IBOutlet NSProgressIndicator *progressIndocator;
 @property (weak) IBOutlet NSView *customView;
 @property (weak) IBOutlet NSButton *helpButton;
+@property (weak) IBOutlet NSButton *startButton;
+@property (weak) IBOutlet NSButton *undoButton;
+@property (weak) IBOutlet NSTextField *nameLabel;
+@property (weak) IBOutlet NSTextField *textInfo;
 
 
 - (IBAction)start:(id)sender;

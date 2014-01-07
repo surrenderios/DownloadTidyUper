@@ -23,6 +23,7 @@
 		F71F047B18754EC70080571D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71F047918754EC70080571D /* InfoPlist.strings */; };
 		F71F047D18754EC70080571D /* DownloadTidyUperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F047C18754EC70080571D /* DownloadTidyUperTests.m */; };
 		F71F0488187566740080571D /* typeDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71F0487187566740080571D /* typeDic.plist */; };
+		F75BEA11187B9DD9009971D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F75BEA13187B9DD9009971D0 /* Localizable.strings */; };
 		F7F8F1891876AB5100059F36 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F8F1881876AB5100059F36 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,12 @@
 		F71F047C18754EC70080571D /* DownloadTidyUperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTidyUperTests.m; sourceTree = "<group>"; };
 		F71F048618754EF90080571D /* DownloadTidyUper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DownloadTidyUper.entitlements; sourceTree = "<group>"; };
 		F71F0487187566740080571D /* typeDic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeDic.plist; sourceTree = "<group>"; };
+		F75BEA06187B9CD0009971D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F75BEA07187B9CD0009971D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "zh-Hans"; path = "zh-Hans.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		F75BEA08187B9CD0009971D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F75BEA12187B9DD9009971D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F75BEA14187B9DF6009971D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F75BEA15187B9DF9009971D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F7F8F1881876AB5100059F36 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -180,6 +187,7 @@
 				F71F046018754EC70080571D /* DownloadTidyUper-Prefix.pch */,
 				F71F046118754EC70080571D /* Credits.rtf */,
 				F71F0487187566740080571D /* typeDic.plist */,
+				F75BEA13187B9DD9009971D0 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = F71F044618754EC70080571D;
 			productRefGroup = F71F045018754EC70080571D /* Products */;
@@ -286,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71F0488187566740080571D /* typeDic.plist in Resources */,
+				F75BEA11187B9DD9009971D0 /* Localizable.strings in Resources */,
 				F71F045D18754EC70080571D /* InfoPlist.strings in Resources */,
 				F71F046B18754EC70080571D /* Images.xcassets in Resources */,
 				F71F046318754EC70080571D /* Credits.rtf in Resources */,
@@ -339,6 +349,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F71F045C18754EC70080571D /* en */,
+				F75BEA06187B9CD0009971D0 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F71F046218754EC70080571D /* en */,
+				F75BEA07187B9CD0009971D0 /* zh-Hans */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -363,8 +375,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				F71F047A18754EC70080571D /* en */,
+				F75BEA08187B9CD0009971D0 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F75BEA13187B9DD9009971D0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F75BEA12187B9DD9009971D0 /* Base */,
+				F75BEA14187B9DF6009971D0 /* en */,
+				F75BEA15187B9DF9009971D0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
