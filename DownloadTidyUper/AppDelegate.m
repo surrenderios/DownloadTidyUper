@@ -195,7 +195,7 @@
     NSArray *appArray = [_dic objectForKey:kApplication];
     
 
-    __block dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    //   __block dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     
     dispatch_queue_t queue = dispatch_queue_create("move path", NULL);
     
@@ -233,10 +233,9 @@
             }
         }
         
-        dispatch_semaphore_signal(sem);
+        //    dispatch_semaphore_signal(sem);
     });
-    
-    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    //  dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     
     //  dispatch_release(sem);
     //   dispatch_release(queue);
